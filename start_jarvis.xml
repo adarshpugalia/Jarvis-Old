@@ -1,0 +1,19 @@
+<aiml version="1.0.1" encoding="UTF-8">
+    <!-- standard start file to make jarvis intelligent -->
+
+    <!-- Category is an atomic AIML unit -->
+    <category>
+
+        <!-- Pattern to match in user input -->
+        <!-- If user enters "LOAD AIML JARVIS" -->
+        <pattern>LOAD AIMLS JARVIS</pattern>
+
+        <!-- Template is the response to the pattern -->
+        <template>
+            <!-- This makes jarvis learn all aiml files -->
+            <learn>*.aiml</learn>
+        </template>
+        
+    </category>
+
+</aiml>
