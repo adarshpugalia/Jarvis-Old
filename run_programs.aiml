@@ -1,0 +1,110 @@
+<aiml version="1.0.1" encoding="UTF-8">
+    <!-- TODO: In case the command is not found, make a custom reply. -->
+	<!-- General conversations with jarvis -->
+
+    <!-- Redirecting anything with open to start -->
+    <category>
+        <pattern>OPEN *</pattern>
+        <template>
+            <srai>START <star/></srai>
+        </template>
+    </category>
+
+
+    <!-- Redirecting anything with run to start -->
+    <category>
+        <pattern>RUN *</pattern>
+        <template>
+            <srai>START <star/></srai>
+        </template>
+    </category>
+
+
+    <!-- default start pattern, runs the * with system tag -->
+    <category>
+        <pattern>START *</pattern>
+        <template>
+            <srai>DO IT</srai>
+            <srai>GREET IRON MAN</srai>
+            <system><star/></system>
+        </template>
+    </category>
+
+
+    <!-- google chrome -->
+    <category>
+        <pattern>START CHROME</pattern>
+        <template>
+            <srai>START google-chrome-stable</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>START * CHROME</pattern>
+        <template>
+            <srai>START CHROME</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>START CHROME *</pattern>
+        <template>
+            <srai>START CHROME</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>START * CHROME *</pattern>
+        <template>
+            <system>google-chrome-stable</system>
+        </template>
+    </category>
+
+
+    <!-- sublime text -->
+    <category>
+        <pattern>START SUBLIME</pattern>
+        <template>
+            <srai>START subl</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>START SUBLIME *</pattern>
+        <template>
+            <srai>START SUBLIME</srai>
+        </template>
+    </category>
+
+
+    <!-- eclipse -->
+    <category>
+        <pattern>START ECLIPSE</pattern>
+        <template>
+            <srai>START gnome-terminal -e 'screen nohup /opt/eclipse/eclipse/eclipse'</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>START ECLIPSE *</pattern>
+        <template>
+            <srai>START ECLIPSE</srai>
+        </template>
+    </category>
+
+
+    <!-- nginx -->
+    <category>
+        <pattern>START NGINX</pattern>
+        <template>
+            <srai>START /opt/nginx/sbin/nginx</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>START NGINX *</pattern>
+        <template>
+            <srai>START NGINX</srai>
+        </template>
+    </category>
+</aiml>
