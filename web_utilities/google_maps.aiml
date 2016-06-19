@@ -1,0 +1,165 @@
+<aiml version="1.0.1" encoding="UTF-8">
+    <!-- TODO: In case the command is not found, make a custom reply. -->
+
+    <!-- Redirecting anything with find and maps to MAPS -->
+    <category>
+        <pattern>FIND * ON MAPS</pattern>
+        <template>
+            <srai>MAPS <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>FIND * ON MAPS *</pattern>
+        <template>
+            <srai>MAPS <star index = "1"/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* FIND * ON MAPS</pattern>
+        <template>
+            <srai>MAPS <star index = "2"/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* FIND * ON MAPS *</pattern>
+        <template>
+            <srai>MAPS <star index = "2"/></srai>
+        </template>
+    </category>
+
+    <!-- redirecting anything with show and maps to maps. -->
+    <category>
+        <pattern>SHOW * ON MAPS</pattern>
+        <template>
+            <srai>MAPS <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>SHOW * ON MAPS *</pattern>
+        <template>
+            <srai>MAPS <star index = "1"/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* SHOW * ON MAPS</pattern>
+        <template>
+            <srai>MAPS <star index = "2"/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* SHOW * ON MAPS *</pattern>
+        <template>
+            <srai>MAPS <star index = "2"/></srai>
+        </template>
+    </category>
+
+
+    <!-- redirecting anything with search and maps to maps. -->
+    <category>
+        <pattern>SEARCH * ON MAPS</pattern>
+        <template>
+            <srai>MAPS <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>SEARCH * ON MAPS *</pattern>
+        <template>
+            <srai>MAPS <star index = "1"/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* SEARCH * ON MAPS</pattern>
+        <template>
+            <srai>MAPS <star index = "2"/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* SEARCH * ON MAPS *</pattern>
+        <template>
+            <srai>MAPS <star index = "2"/></srai>
+        </template>
+    </category>
+
+
+    <!-- The actual template for MAPS that opens a new tab in chrome. -->
+    <category>
+        <pattern>MAPS *</pattern>
+        <template>
+            <srai>DO IT</srai>
+            <srai>GREET IRON MAN</srai>
+            <system>google-chrome-stable "https://www.google.co.in/maps/search/<star/>"</system>
+        </template>
+    </category>
+
+    <!-- templates for directions on maps begin. -->
+    <!-- redirecting anything with directions from and to to directions -->
+    <category>
+        <pattern>DIRECTION FROM * TO *</pattern>
+        <template>
+            <srai>DIRECTIONS FROM <star index="1"/> TO <star index = "2"/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* DIRECTION FROM * TO *</pattern>
+        <template>
+            <srai>DIRECTIONS FROM <star index="2"/> TO <star index = "3"/></srai>
+        </template>
+    </category>
+
+
+    <!-- redirecting anything with route from and to to directions -->
+    <category>
+        <pattern>ROUTE FROM * TO *</pattern>
+        <template>
+            <srai>DIRECTIONS FROM <star index="1"/> TO <star index = "2"/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* ROUTE FROM * TO *</pattern>
+        <template>
+            <srai>DIRECTIONS FROM <star index="2"/> TO <star index = "3"/></srai>
+        </template>
+    </category>
+
+    <!-- redirecting anything with way from and to to directions -->
+    <category>
+        <pattern>WAY FROM * TO *</pattern>
+        <template>
+            <srai>DIRECTIONS FROM <star index="1"/> TO <star index = "2"/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* WAY FROM * TO *</pattern>
+        <template>
+            <srai>DIRECTIONS FROM <star index="2"/> TO <star index = "3"/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* DIRECTIONS FROM * TO *</pattern>
+        <template>
+            <srai>DIRECTIONS FROM <star index="2"/> TO <star index = "3"/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>DIRECTIONS FROM * TO *</pattern>
+        <template>
+            <srai>DO IT</srai>
+            <srai>GREET IRON MAN</srai>
+            <system>google-chrome-stable "https://www.google.co.in/maps/dir/<star index="1"/>/<star index="2"/>"</system>
+        </template>
+    </category>
+</aiml>
