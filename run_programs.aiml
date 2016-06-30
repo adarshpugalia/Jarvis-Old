@@ -26,7 +26,7 @@
         <template>
             <srai>DO IT</srai>
             <srai>GREET IRON MAN</srai>
-            <system><star/></system>
+            <system>gnome-terminal -e <star/></system>
         </template>
     </category>
 
@@ -81,7 +81,7 @@
     <category>
         <pattern>START ECLIPSE</pattern>
         <template>
-            <srai>START gnome-terminal -e 'screen nohup /opt/eclipse/eclipse/eclipse'</srai>
+            <srai>START 'screen nohup /opt/eclipse/eclipse/eclipse'</srai>
         </template>
     </category>
 

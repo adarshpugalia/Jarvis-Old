@@ -12,6 +12,7 @@
         <template>
             <!-- This makes jarvis learn all aiml files -->
             <learn>*.aiml</learn>
+            <learn>web_utilities/*.aiml</learn>
         </template>
         
     </category>

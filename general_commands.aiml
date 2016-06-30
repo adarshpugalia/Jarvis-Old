@@ -1,0 +1,70 @@
+<aiml version="1.0.1" encoding="UTF-8">
+	<!-- General conversations with jarvis -->
+
+    <!-- root command to change wallpaper. -->
+    <category>
+        <pattern>CHANGE WALLPAPER</pattern>
+        <template>
+            <srai>START /home/adarsh/Personal/Jarvis/Scripts/Bash/change_wallpaper.sh</srai>
+        </template>
+    </category>
+
+
+    <!-- redirecting the other wallpaper commands to root change wallpaper command. -->
+    <category>
+        <pattern>CHANGE * WALLPAPER</pattern>
+        <template>
+            <srai>CHANGE WALLPAPER</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* CHANGE WALLPAPER</pattern>
+        <template>
+            <srai>CHANGE WALLPAPER</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>CHANGE WALLPAPER *</pattern>
+        <template>
+            <srai>CHANGE WALLPAPER</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>CHANGE * WALLPAPER *</pattern>
+        <template>
+            <srai>CHANGE WALLPAPER</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* CHANGE * WALLPAPER *</pattern>
+        <template>
+            <srai>CHANGE WALLPAPER</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* CHANGE WALLPAPER *</pattern>
+        <template>
+            <srai>CHANGE WALLPAPER</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>CHANGE * WALLPAPER *</pattern>
+        <template>
+            <srai>CHANGE WALLPAPER</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* CHANGE * WALLPAPER *</pattern>
+        <template>
+            <srai>CHANGE WALLPAPER</srai>
+        </template>
+    </category>
+    
+</aiml>
