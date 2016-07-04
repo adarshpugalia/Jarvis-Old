@@ -31,6 +31,16 @@
     </category>
 
 
+    <category>
+        <pattern>START * IN * NEW TERMINAL</pattern>
+        <template>
+            <srai>DO IT</srai>
+            <srai>GREET IRON MAN</srai>
+            <system>gnome-terminal -x sh -c "<star index = "1"/>; bash"</system>
+        </template>
+    </category>
+
+
     <!-- google chrome -->
     <category>
         <pattern>START CHROME</pattern>
@@ -97,7 +107,7 @@
     <category>
         <pattern>START NGINX</pattern>
         <template>
-            <srai>START /opt/nginx/sbin/nginx</srai>
+            <srai>START 'sudo /opt/nginx/sbin/nginx'</srai>
         </template>
     </category>
 

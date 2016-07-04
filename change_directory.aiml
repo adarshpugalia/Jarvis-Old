@@ -1,0 +1,88 @@
+<aiml version="1.0.1" encoding="UTF-8">
+    <!-- root command to go to a directory in a new terminal. -->
+    <category>
+        <pattern>CD *</pattern>
+        <template>
+            <think>
+                <set name ="topic">CHANGE DIRECTORY</set>
+                <set name ="path"><star/></set>
+            </think>
+            <srai>CD <star/></srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>TAKE ME TO *</pattern>
+        <template>
+            <srai>CD <star/></srai>
+        </template>
+    </category> 
+
+    <category>
+        <pattern>CHANGE DIRECTORY TO *</pattern>
+        <template>
+            <srai>CD <star/></srai>
+        </template>
+    </category>   
+
+    <category>
+        <pattern>TAKE ME TO * JARVIS</pattern>
+        <template>
+            <srai>CD <star/></srai>
+        </template>
+    </category> 
+
+    <category>
+        <pattern>CHANGE DIRECTORY TO * JARVIS</pattern>
+        <template>
+            <srai>CD <star/></srai>
+        </template>
+    </category>   
+
+    <category>
+        <pattern>* TAKE ME TO *</pattern>
+        <template>
+            <srai>CD <star index = "2"/></srai>
+        </template>
+    </category> 
+
+    <category>
+        <pattern>* CHANGE DIRECTORY TO *</pattern>
+        <template>
+            <srai>CD <star index = "2" /></srai>
+        </template>
+    </category> 
+
+    <!-- topic for change directory -->
+    <topic name="CHANGE DIRECTORY">
+        <!-- root for changing directory in the topic -->
+        <category>
+            <pattern>CHANGE *</pattern>
+            <template>
+                <srai>START cd <star/> in a new terminal</srai>
+            </template>
+        </category>
+        
+        <!-- you can put your custom name for paths to change in li below -->
+        <category>
+            <pattern>CD *</pattern>
+            <template>
+                <condition name = "path">
+                <li value="personal"><srai>CHANGE /home/adarsh/Personal</srai></li>
+                <li value="Personal"><srai>CHANGE /home/adarsh/Personal</srai></li>
+                <li value="home"><srai>CHANGE /home</srai></li>
+                <li value="Home"><srai>CHANGE /home</srai></li>
+                <li value="work"><srai>CHANGE /home/adarsh/Work</srai></li>
+                <li value="Work"><srai>CHANGE /home/adarsh/Work</srai></li>
+                <li value="cp"><srai>CHANGE /home/adarsh/Personal/CP</srai></li>
+                <li value="CP"><srai>CHANGE /home/adarsh/Personal/CP</srai></li>
+                <li value="absolut"><srai>CHANGE /home/adarsh/Work/absolut</srai></li>
+                <li value="repo"><srai>CHANGE /home/adarsh/Work/absolut</srai></li>
+                <li value="Repo"><srai>CHANGE /home/adarsh/Work/absolut</srai></li>
+                <li value="*"><srai>CHANGE <star/></srai></li>
+                </condition>
+                <set name="topic"></set>
+            </template>
+        </category>
+    </topic>
+</aiml>
